@@ -1,5 +1,6 @@
 import React from 'react'
 import { ControlledAppbar } from '../../components'
+import { ControlledButton } from '../../components'
 
 
 export const HomeBlocks = () => {

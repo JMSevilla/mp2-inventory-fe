@@ -2,6 +2,7 @@ import React from 'react'
 import { ControlledAppbar } from '../../components'
 
 
+
 export const HomeBlocks = () => {
 
     return (

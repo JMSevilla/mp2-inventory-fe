@@ -1,5 +1,6 @@
 import React from 'react'
 import { ControlledAppbar } from '../../components'
+import { ControlledFooter } from '../../components'
 
 
 export const HomeBlocks = () => {
@@ -8,6 +9,7 @@ export const HomeBlocks = () => {
         <>
             <ControlledAppbar/>
             <h3>Home</h3>
+            <ControlledFooter/>
         </>
     )
 }

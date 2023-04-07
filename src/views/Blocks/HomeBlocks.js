@@ -3,6 +3,7 @@ import { ControlledAppbar } from '../../components'
 import { ControlledFooter } from '../../components'
 
 
+
 export const HomeBlocks = () => {
 
     return (

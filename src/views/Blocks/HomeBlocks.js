@@ -1,23 +1,11 @@
 import React, {useEffect} from 'react'
 import { ControlledAppbar } from '../../components'
-import { useMessageContext } from '../../core/context/MessageContext'
-
+import { useAuthContext } from '../../core/context/AuthContext'
 
 export const HomeBlocks = () => {
-    const { handleToastify } = useMessageContext()
-    /* Kindly remove this code below. this is for testing purposes only */
+    const { findAnyAccount } = useAuthContext()
     useEffect(() => {
-        handleToastify(
-            "Toast Message Trigger",
-            "top-right",
-            false,
-            true,
-            true,
-            true,
-            undefined,
-            "dark",
-            "error"
-        )
+        findAnyAccount()
     }, [])
     return (
         <>

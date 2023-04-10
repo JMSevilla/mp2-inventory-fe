@@ -1,3 +1,4 @@
 export const Externalization = {
-    Home : { path : "/" }
+    Home : { path : "/" },
+    SysAdReg : { path : "/admin-registration"}
 }

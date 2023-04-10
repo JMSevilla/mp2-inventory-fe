@@ -14,7 +14,7 @@ export const ControlledGrig = (props) => {
         <Grid style={style} container rowSpacing={rowSpacing} columnSpacing={columnSpacing}>
             {
                 arrMapping.map((item) =>(
-                    <Grid item xs={xs}>
+                    <Grid item xs={item.xs}>
                         {item.children}
                     </Grid>
                 ))

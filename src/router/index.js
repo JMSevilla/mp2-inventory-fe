@@ -1,8 +1,9 @@
 import { Externalization } from "./base/externalization";
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
-import { Home } from "../views";
+import { Home, SysAdReg } from "../views";
 import { ToastContext } from "../core/context/MessageContext";
 import { ControlledToast } from "../components";
+import { AuthContext } from "../core/context/AuthContext";
 const DynamicRoute = ({component: Component, ...rest}) => {
     return (
         <>
@@ -20,19 +21,22 @@ export default () => (
     <BrowserRouter>
         <Switch>
             <ToastContext>
-            <ControlledToast 
-            position="top-right"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-            />
-            <DynamicRoute exact path={Externalization.Home.path} component={Home} />
+                <AuthContext>
+                    <ControlledToast 
+                        position="top-right"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="dark"
+                        />
+                        <DynamicRoute exact path={Externalization.Home.path} component={Home} />
+                        <DynamicRoute exact path={Externalization.SysAdReg.path} component={SysAdReg} />
+                </AuthContext>
             </ToastContext>
         </Switch>
     </BrowserRouter>

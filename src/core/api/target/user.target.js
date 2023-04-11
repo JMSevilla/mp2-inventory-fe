@@ -1,11 +1,9 @@
 import { Http } from "../http-client";
-
-class UserTarget extends Http {
-    connectivity = this.connect()
-
-    userCreationDetection(){
-        // api request
+import { HTTPDataHandler } from "../../../utils/formDataValidator";
+export class UserTarget extends Http {
+    connectivity = new Http().connect()
+    userCreationDetection(object){
+        return this.connectivity.post('/checkUser.php', HTTPDataHandler(object))
     }
 }
 
-export default UserTarget

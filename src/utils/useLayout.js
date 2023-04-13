@@ -1,17 +1,16 @@
 //blocks
-import { HomeBlocks, AdminRegistrationBlocks } from "../views/Blocks";
+import { HomeBlocks, AdminRegistrationBlocks, LoginBlocks } from "../views/Blocks";
 
 export const useLayout = (componentTarget, props) => {
-    const {
-        
-    } = props
-
+    
     return componentTarget.map(component => {
         switch(component) {
             case "HomeBlocks":
                 return <HomeBlocks />
             case 'csrf-admin-registration':
                 return <AdminRegistrationBlocks />
+            case 'csrf-login':
+                return <LoginBlocks {...props} />
             default:
                 return <HomeBlocks />
         }

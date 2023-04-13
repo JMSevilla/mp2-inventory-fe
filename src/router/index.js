@@ -1,6 +1,6 @@
 import { Externalization } from "./base/externalization";
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
-import { Home, SysAdReg } from "../views";
+import { Home, SysAdReg, Login } from "../views";
 import { ToastContext } from "../core/context/MessageContext";
 import { ControlledToast } from "../components";
 import { AuthContext } from "../core/context/AuthContext";
@@ -36,6 +36,7 @@ export default () => (
                         />
                         <DynamicRoute exact path={Externalization.Home.path} component={Home} />
                         <DynamicRoute exact path={Externalization.SysAdReg.path} component={SysAdReg} />
+                        <DynamicRoute exact path={Externalization.Login.path} component={Login} />
                 </AuthContext>
             </ToastContext>
         </Switch>

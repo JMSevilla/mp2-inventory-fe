@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 
-export const ControlledContainer = ({props}) => {
+export const ControlledContainer = (props) => {
     const {
         children,
         style

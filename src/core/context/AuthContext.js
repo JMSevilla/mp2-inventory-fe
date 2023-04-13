@@ -8,12 +8,14 @@ const AuthHandlerContext = createContext(null)
 
 export const AuthContext = ({children}) => {
     const findAnyAccount = () => {
-        const object = {
-            username: 'auto-detection',
-            trigger: true
-        }
-        distribution('check-users', object).then(response => {
-            console.log(response)
+        return new Promise((resolve) => {
+            const object = {
+                username: 'auto-detection',
+                trigger: true
+            }
+            distribution('check-users', object).then(response => {
+                resolve(response)
+            })
         })
     }
 
